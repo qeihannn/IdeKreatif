@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+ session_start();
+ $notification = $_session['notification'] ?? null;
+ if ($notification) {
+    unset($_session['notification']);
+ }
+ ?>
+DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
